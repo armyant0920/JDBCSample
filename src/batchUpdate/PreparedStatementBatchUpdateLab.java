@@ -68,7 +68,9 @@ public class PreparedStatementBatchUpdateLab {
             checkBatchError(results);
             pstmt.clearBatch();
             builder.append("</table></html>");
+
             conn.commit();
+            conn.rollback();
 
             //nio
             /*
